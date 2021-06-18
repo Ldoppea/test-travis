@@ -12,8 +12,17 @@ env:
   global:
     - secure: "fAiV2zGYiAtDhxK7uKqFm6dmxAzspUCWyUm/8eCK3R1dkHv2PYPHnfI/wevonhXqL4dicZbyCicG98YxrSYE0EHN5z2z2HP/H2DaN24rrCegC/Ihgr9iluGoIgfCxLnmF+wS1ibzc24Chy2nK0uDTsjZ/FRDsZdx2mSY6mkZJ3mswVRC5X1x/003vuDH1vUX5ZhKRGlb5hfoJq/coPvE0AMMdaefYTSt6tHGU1tXno4cZv2cS+XD6F1soorxfXPRdzRd1un9bgqeH6LqpDjDOgn759HOrl48qcFgTSHHyhcXPEPIdqdiLYMwpcJBrGBCu6ElqGPFDIxto7W5kYq0F+Ja0GqbVdZNiAUOH1kCD9fLe4l9dvhDDzv/sW3LkL+PrI1wYiVW7meCg2DravIN6Oo7KibWoQeFv15ylYOAjp8v1InXY40wBWr7svnkBIhB1xhghcuJk9b7qPtMsHKBQDJc7gLjUVAuFqbI3tfkqS9AK6zM1Zgs4ddxUM0D18FzQSzIXRkyDPrnCd6vN4VIjKXLXnYKF3QVqeFhDsbnus26glcvWhyHAn6Q2DyDrdlwiRCwjkD5dQGTe4IQtt7cSs6+kKJJ5IJkp1Sid3szl/OAYT9zFt4qDxgHu9VTEu2X5VMvAdh6vGF4BF7wi6jvKvwtkr3NTuy3MV79HmfVi7Q="
 cache:
-  yarn: true
+  yarn: false
   directories:
   - node_modules
 script:
   - npm run travis
+before_deploy:
+  - npm install
+deploy:
+  - provider: script
+    skip_cleanup: true
+    # deploy the build on downcloud and publish to the Cozy registry
+    script: npm run travis
+    on:
+      branch: master
