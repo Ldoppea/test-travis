@@ -3,7 +3,7 @@
     "config:base"
   ],
   "masterIssue": true,
-  "schedule": "every hour",
+  "schedule": "at any time",
   "packageRules": [
     {
       "excludePackageNames": [
