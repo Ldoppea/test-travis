@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "config:base",
+    "schedule:monthly"
+  ],
+  "packageRules": [
+    {
+      "excludePackageNames": [
+        "^cozy-*"
+      ],
+      "rangeStrategy": "pin"
+    },
+    {
+      "matchPackageNames": [
+        "^cozy-*"
+      ],
+      "rangeStrategy": "bump"
+    }
+  ],
+  "timezone": "Europe/Paris",
+  "updateNotScheduled": false
+}
