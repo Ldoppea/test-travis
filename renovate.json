@@ -8,13 +8,13 @@
   "packageRules": [
     {
       "excludePackagePatterns": [
-        "^cozy-"
+        "^cozy-*"
       ],
       "rangeStrategy": "pin"
     },
     {
       "matchPackageNames": [
-        "^cozy-"
+        "^cozy-*"
       ],
       "rangeStrategy": "bump"
     }
