@@ -13,7 +13,7 @@
       "rangeStrategy": "pin"
     },
     {
-      "excludePackagePatterns": [
+      "matchPackagePatterns": [
         "^cozy"
       ],
       "rangeStrategy": "bump"
