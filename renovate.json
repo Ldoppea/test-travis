@@ -4,17 +4,17 @@
   ],
   "masterIssue": true,
   "schedule": "at any time",
-  "ignoreDeps": ["cozy-scripts"],
+  "ignoreDeps": ["^cozy-"],
   "packageRules": [
     {
-      "excludePackageNames": [
-        "cozy-scripts"
+      "excludePackagePatterns": [
+        "^cozy-"
       ],
       "rangeStrategy": "pin"
     },
     {
       "matchPackageNames": [
-        "^cozy-*"
+        "^cozy-"
       ],
       "rangeStrategy": "bump"
     }
