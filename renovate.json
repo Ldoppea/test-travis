@@ -2,7 +2,7 @@
   "extends": [
     "config:base"
   ],
-  "schedule": "every 5 minutes",
+  "schedule": "every hour",
   "packageRules": [
     {
       "excludePackageNames": [
