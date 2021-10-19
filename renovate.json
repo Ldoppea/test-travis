@@ -7,7 +7,7 @@
   "packageRules": [
     {
       "excludePackageNames": [
-        "cozy-libs"
+        "cozy-scripts"
       ],
       "rangeStrategy": "pin"
     },
