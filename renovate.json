@@ -4,6 +4,7 @@
   ],
   "masterIssue": true,
   "schedule": "at any time",
+  "ignoreDeps": ["cozy-scripts"],
   "packageRules": [
     {
       "excludePackageNames": [
